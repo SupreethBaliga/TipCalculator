@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Tip Calculator</string>
+    <string name="billAmount">Enter Bill Amount</string>
+    <string name="serviceText"> SERVICE RATING</string>
+</resources>
