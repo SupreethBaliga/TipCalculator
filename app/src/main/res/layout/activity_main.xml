@@ -9,7 +9,7 @@
 
     <TextView
         android:id="@+id/titleTextView"
-        android:layout_width="138dp"
+        android:layout_width="163dp"
         android:layout_height="37dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
@@ -26,17 +26,17 @@
         app:layout_constraintHorizontal_bias="0.031"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.011" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/AmtTextView"
-        android:layout_width="380dp"
+        android:layout_width="382dp"
         android:layout_height="56dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
+        android:background="@android:color/transparent"
         android:ems="10"
         android:gravity="center"
         android:hint="@string/billAmount"
@@ -86,6 +86,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:onClick="onViewClicked"
             android:contentDescription="@string/serviceRatingIconDesc"
             android:src="@drawable/ic_001_frown" />
 
@@ -94,6 +95,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:onClick="onViewClicked"
             android:contentDescription="@string/serviceRatingIconDesc"
             android:src="@drawable/ic_002_smile" />
 
@@ -102,6 +104,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:onClick="onViewClicked"
             android:contentDescription="@string/serviceRatingIconDesc"
             android:src="@drawable/ic_004_emoticon_with_happy_face" />
 
@@ -110,6 +113,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:onClick="onViewClicked"
             android:contentDescription="@string/serviceRatingIconDesc"
             android:src="@drawable/ic_003_happy" />
 
@@ -118,6 +122,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:onClick="onViewClicked"
             android:contentDescription="@string/serviceRatingIconDesc"
             android:src="@drawable/ic_005_happy_1" />
 
@@ -126,6 +131,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:onClick="onViewClicked"
             android:contentDescription="@string/serviceRatingIconDesc"
             android:src="@drawable/ic_006_emoji" />
     </LinearLayout>
@@ -176,9 +182,10 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:gravity="center"
-        android:text="@string/tipPercent"
+        android:text=""
         android:textAllCaps="false"
         android:textColor="@android:color/background_light"
+        android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/viewVerticalMiddle"
@@ -218,8 +225,9 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:gravity="center"
-        android:text="@string/tipAmt"
+        android:text=""
         android:textColor="@android:color/background_light"
+        android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -258,7 +266,7 @@
         android:gravity="center"
         android:text="@string/totalBill"
         android:textColor="@android:color/background_light"
-        android:textSize="18sp"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -268,21 +276,25 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/textView4"
-        android:layout_width="197dp"
-        android:layout_height="50dp"
+        android:id="@+id/billTotalTextView"
+        android:layout_width="207dp"
+        android:layout_height="58dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
-        android:text="totalBillDisplay"
+        android:gravity="center"
+        android:textColor="@android:color/background_light"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:text=""
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/totalBill"
-        app:layout_constraintVertical_bias="0.057" />
+        app:layout_constraintVertical_bias="0.077" />
 
 
 </android.support.constraint.ConstraintLayout>

@@ -5,7 +5,8 @@
     <string name="autofillHintBillAmt">PLEASE FILL THE RIGHT AMOUNT</string>
     <string name="serviceText"> SERVICE RATING</string>
     <string name="serviceRatingIconDesc">This is a button for setting the service rating.</string>
-    <string name="tipPercent">Tip Percent\n\n</string>
-    <string name="tipAmt">Tip Amount\n\n</string>
-    <string name="totalBill">TOTAL BILL AMOUNT</string>
+    <string name="tipPercent">Tip Percent\nRs.</string>
+    <string name="tipAmt">Tip Amount\nRs.</string>
+    <string name="totalBill">TOTAL BILL</string>
+    <string name="rupees">Rs.</string>
 </resources>
