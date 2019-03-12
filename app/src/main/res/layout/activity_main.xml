@@ -17,7 +17,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
-        android:text="BILL AMOUNT"
+        android:text="@string/billAmountTitle"
         android:textColor="@android:color/background_light"
         android:textSize="18sp"
         android:textStyle="bold|italic"
@@ -29,7 +29,7 @@
         app:layout_constraintVertical_bias="0.011" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/AmtTextView"
         android:layout_width="380dp"
         android:layout_height="56dp"
         android:layout_marginStart="8dp"
@@ -37,76 +37,99 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
         android:ems="10"
         android:gravity="center"
         android:hint="@string/billAmount"
-        android:inputType="number"
+        android:inputType="numberDecimal"
         android:textColor="@android:color/background_light"
         android:textColorHint="@android:color/background_light"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.533"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titleTextView"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="381dp"
-        android:layout_height="33dp"
+    <view
+        android:id="@+id/view2"
+        class="android.support.v7.widget.ActionMenuView"
+        id="@+id/view"
+        android:layout_width="500dp"
+        android:layout_height="1dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:orientation="horizontal"
+        android:layout_marginBottom="208dp"
+        android:background="@color/lightGrey"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.014" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="395dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AmtTextView">
 
         <ImageView
+            android:id="@+id/serviceRatingIcon1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:contentDescription="@string/serviceRatingIconDesc"
             android:src="@drawable/ic_001_frown" />
 
         <ImageView
+            android:id="@+id/serviceRatingIcon2"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:contentDescription="@string/serviceRatingIconDesc"
             android:src="@drawable/ic_002_smile" />
 
         <ImageView
+            android:id="@+id/serviceRatingIcon3"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:contentDescription="@string/serviceRatingIconDesc"
             android:src="@drawable/ic_004_emoticon_with_happy_face" />
 
         <ImageView
+            android:id="@+id/serviceRatingIcon5"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:src="@drawable/ic_005_happy_1" />
-
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:contentDescription="@string/serviceRatingIconDesc"
             android:src="@drawable/ic_003_happy" />
 
         <ImageView
+            android:id="@+id/serviceRatingIcon4"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:contentDescription="@string/serviceRatingIconDesc"
+            android:src="@drawable/ic_005_happy_1" />
+
+        <ImageView
+            android:id="@+id/serviceRatingIcon6"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contentDescription="@string/serviceRatingIconDesc"
             android:src="@drawable/ic_006_emoji" />
     </LinearLayout>
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/serviceRatingTitle"
         android:layout_width="180dp"
         android:layout_height="45dp"
         android:layout_marginStart="8dp"
@@ -121,7 +144,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.03" />
+        app:layout_constraintTop_toBottomOf="@+id/view2"
+        app:layout_constraintVertical_bias="0.0" />
+
+
 </android.support.constraint.ConstraintLayout>

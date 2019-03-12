@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">Tip Calculator</string>
+    <string name="billAmountTitle">BILL AMOUNT</string>
     <string name="billAmount">Enter Bill Amount</string>
+    <string name="autofillHintBillAmt">PLEASE FILL THE RIGHT AMOUNT</string>
     <string name="serviceText"> SERVICE RATING</string>
+    <string name="serviceRatingIconDesc">This is a button for setting the service rating.</string>
 </resources>
