@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#3399ff"
+    android:background="@color/backgroundColor"
     tools:context=".MainActivity">
 
     <TextView
@@ -76,18 +76,22 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
         android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/AmtTextView">
+        app:layout_constraintTop_toBottomOf="@+id/AmtTextView"
+        app:layout_constraintVertical_bias="0.01">
 
         <ImageView
             android:id="@+id/serviceRatingIcon1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:onClick="onViewClicked"
             android:contentDescription="@string/serviceRatingIconDesc"
+            android:onClick="onViewClicked"
             android:src="@drawable/ic_001_frown" />
 
         <ImageView
@@ -95,8 +99,8 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:onClick="onViewClicked"
             android:contentDescription="@string/serviceRatingIconDesc"
+            android:onClick="onViewClicked"
             android:src="@drawable/ic_002_smile" />
 
         <ImageView
@@ -104,8 +108,8 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:onClick="onViewClicked"
             android:contentDescription="@string/serviceRatingIconDesc"
+            android:onClick="onViewClicked"
             android:src="@drawable/ic_004_emoticon_with_happy_face" />
 
         <ImageView
@@ -113,8 +117,8 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:onClick="onViewClicked"
             android:contentDescription="@string/serviceRatingIconDesc"
+            android:onClick="onViewClicked"
             android:src="@drawable/ic_003_happy" />
 
         <ImageView
@@ -122,8 +126,8 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:onClick="onViewClicked"
             android:contentDescription="@string/serviceRatingIconDesc"
+            android:onClick="onViewClicked"
             android:src="@drawable/ic_005_happy_1" />
 
         <ImageView
@@ -131,8 +135,8 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:onClick="onViewClicked"
             android:contentDescription="@string/serviceRatingIconDesc"
+            android:onClick="onViewClicked"
             android:src="@drawable/ic_006_emoji" />
     </LinearLayout>
 
@@ -270,7 +274,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/viewAboveTotalBillAmount"
         app:layout_constraintVertical_bias="0.0" />
@@ -281,20 +285,19 @@
         android:layout_height="58dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:gravity="center"
+        android:text=""
         android:textColor="@android:color/background_light"
         android:textSize="28sp"
         android:textStyle="bold"
-        android:text=""
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/totalBill"
-        app:layout_constraintVertical_bias="0.077" />
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </android.support.constraint.ConstraintLayout>

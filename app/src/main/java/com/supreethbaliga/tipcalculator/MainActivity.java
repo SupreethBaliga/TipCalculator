@@ -52,12 +52,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-
         setTipValues();
     }
 
     private void setTipValues() {
-        tipPercentTextView.setText(getString(R.string.tipPercent) + percentage);
+        tipPercentTextView.setText(getString(R.string.tipPercent) + percentage+getString(R.string.PercentSymbol));
         tipAmtTextView.setText(getString(R.string.tipAmt) + tipTotalAmount);
         billTotalTextView.setText(getString(R.string.rupees) + billAmtTotal);
     }
@@ -67,23 +66,32 @@ public class MainActivity extends AppCompatActivity {
         switch (view.getId()) {
             case R.id.serviceRatingIcon1:
                 percentage = DefaultTipPercent;
+                serviceRatingIcon1.setBackgroundColor(getResources().getColor(R.color.iconOnClick));
                 break;
             case R.id.serviceRatingIcon2:
                 percentage = TipPercent1;
+                serviceRatingIcon2.setBackgroundColor(getResources().getColor(R.color.iconOnClick));
                 break;
             case R.id.serviceRatingIcon3:
                 percentage = TipPercent2;
+                serviceRatingIcon3.setBackgroundColor(getResources().getColor(R.color.iconOnClick));
                 break;
             case R.id.serviceRatingIcon4:
                 percentage = TipPercent3;
+                serviceRatingIcon4.setBackgroundColor(getResources().getColor(R.color.iconOnClick));
                 break;
             case R.id.serviceRatingIcon5:
                 percentage = TipPercent4;
+                serviceRatingIcon5.setBackgroundColor(getResources().getColor(R.color.iconOnClick));
                 break;
             case R.id.serviceRatingIcon6:
                 percentage = TipPercent5;
+                serviceRatingIcon6.setBackgroundColor(getResources().getColor(R.color.iconOnClick));
                 break;
         }
+        calculateFinalBill();
+        setTipValues();
+        setOriginalButtonColor();
     }
 
     @OnTextChanged(R.id.AmtTextView)
@@ -94,8 +102,24 @@ public class MainActivity extends AppCompatActivity {
 
     private void calculateFinalBill()
     {
-        initialBillAmt=Float.valueOf(AmtTextView.getText().toString());
+        if(AmtTextView.getText().toString().equals("") || AmtTextView.getText().toString().equals("."))
+        {
+            initialBillAmt=0;
+        }
+        else {
+            initialBillAmt=Float.valueOf(AmtTextView.getText().toString());
+        }
         tipTotalAmount=(initialBillAmt*percentage)/100;
         billAmtTotal=initialBillAmt+tipTotalAmount;
+    }
+
+    private void setOriginalButtonColor()
+    {
+        serviceRatingIcon1.setBackgroundColor(getResources().getColor(R.color.backgroundColor));
+        serviceRatingIcon2.setBackgroundColor(getResources().getColor(R.color.backgroundColor));
+        serviceRatingIcon3.setBackgroundColor(getResources().getColor(R.color.backgroundColor));
+        serviceRatingIcon4.setBackgroundColor(getResources().getColor(R.color.backgroundColor));
+        serviceRatingIcon5.setBackgroundColor(getResources().getColor(R.color.backgroundColor));
+        serviceRatingIcon6.setBackgroundColor(getResources().getColor(R.color.backgroundColor));
     }
 }
