@@ -1,11 +1,11 @@
 package com.supreethbaliga.tipcalculator;
 
-import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -40,8 +40,24 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+
+
+        if(savedInstanceState != null) {
+            percentage = savedInstanceState.getFloat("percent");
+            calculateFinalBill();
+        }
+
         setTipValues();
     }
+
+    /*@Override
+    public void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        percentage = savedInstanceState.getFloat("percentage");
+        calculateFinalBill();
+        setTipValues();
+    }*/
+
 
     private void setTipValues() {
         tipPercentTextView.setText(getString(R.string.tipPercent, percentage));
@@ -90,5 +106,12 @@ public class MainActivity extends AppCompatActivity {
     public void onTextChanged() {
         calculateFinalBill();
         setTipValues();
+    }
+
+    @Override
+    public void onSaveInstanceState(@NonNull Bundle outState) {
+        outState.putFloat("percent",percentage);
+        super.onSaveInstanceState(outState);
+        //outState.putFloat("percentage",percentage);
     }
 }
